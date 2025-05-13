@@ -1,0 +1,165 @@
+/* Import Google Font - Overpass */
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+/* CSS Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Overpass', sans-serif;
+  font-size: 15px;
+  background-color: hsl(216, 12%, 8%); /* Grey 950 */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+/* Card Container Styles */
+.card {
+  background: radial-gradient(circle at top, hsl(213, 19%, 18%), hsl(213, 19%, 12%));
+  max-width: 412px;
+  border-radius: 30px;
+  padding: 2rem;
+}
+
+/* Rating State Styles */
+.rating-state {
+  display: block;
+}
+
+.star-icon {
+  background-color: hsl(213, 19%, 22%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.rating-state h1 {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+}
+
+.rating-state p {
+  color: hsl(217, 12%, 63%); /* Grey 500 */
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.rating-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.rating-btn {
+  background-color: hsl(213, 19%, 22%);
+  color: hsl(217, 12%, 63%); /* Grey 500 */
+  width: 51px;
+  height: 51px;
+  border-radius: 50%;
+  border: none;
+  font-family: 'Overpass', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.rating-btn:hover {
+  background-color: hsl(25, 97%, 53%); /* Orange 500 */
+  color: white;
+}
+
+.rating-btn.active {
+  background-color: hsl(217, 12%, 63%); /* Grey 500 */
+  color: white;
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: hsl(25, 97%, 53%); /* Orange 500 */
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 25px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: white;
+  color: hsl(25, 97%, 53%); /* Orange 500 */
+}
+
+/* Thank You State Styles */
+.thank-you-state {
+  display: none;
+  text-align: center;
+}
+
+.thank-you-state img {
+  margin-bottom: 1.5rem;
+}
+
+.selected-rating {
+  background-color: hsl(213, 19%, 22%);
+  color: hsl(25, 97%, 53%); /* Orange 500 */
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.thank-you-state h2 {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+}
+
+.thank-you-state p {
+  color: hsl(217, 12%, 63%); /* Grey 500 */
+  line-height: 1.5;
+}
+
+/* Attribution Styles */
+.attribution {
+  margin-top: 2rem;
+  font-size: 11px;
+  text-align: center;
+  color: hsl(217, 12%, 63%); /* Grey 500 */
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 375px) {
+  .card {
+    padding: 1.5rem;
+  }
+  
+  .rating-buttons {
+    gap: 0.5rem;
+  }
+  
+  .rating-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 0.9rem;
+  }
+}
